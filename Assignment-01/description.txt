@@ -1,0 +1,76 @@
+Model
+
+Constants
+2 Players
+
+Playing Board
+8 x 8 (64 total) square game board
+Each square is either white or black 
+(color is more for the users of the board than any real functionality throughout gameplay)
+The squares of the grid can be labeled in some manner with alphanumeric tags, akin to common grid systems, e.g. “A1, A2, A3… B1, B2, B3… C1, C2, C3”
+The labeling of the grid will be important for the program and the player/user to keep track of gameplay.
+
+Teams (One for each player or opponent)
+Black	0
+White	1
+
+These colors simply divide pieces into two equal groups. There is no correlation between the color of a game piece and the color of the square on which it is located.
+
+Objects
+
+Game_Pieces (2 equal sets for both opponents)
+Name	Rank	Count (per opponent)
+Pawn	0		8
+Knight	1		2
+Bishop	2		2
+Rook	3		2
+Queen	4		5
+Properties will include:
+	name (type of game piece specified)
+	rank (for score)
+	movement_pattern (a Valid_Move method will be called and use this information)
+	current_location (the location on the grid, e.g. “A8”)
+
+Team (2 teams total, one player owns each team)
+This is an array of all game pieces still in play
+Once a game piece is conquered in battle, they are removed from list and added to “Team_Dead”
+
+Team_Dead
+This is an array of all game pieces out of play
+This will be used to display pieces to end user by pulling them off the playing board and putting them in an adjacent (and invisible) grid
+
+Player
+	number (index of player)
+	name (player’s name)
+	Team
+	Team_Dead
+	score (based on opponent’s Team_Dead)
+
+Game
+	players (2 opponents per game one opponent can be computer)
+	total_time
+	turn_time
+	game_state (in_play, check_mate, stale_mate, uninitiated)
+	
+Functions/Methods
+
+new_game( )
+	sets game pieces’ locations to initial locations and clears timer and score
+
+check_move_pattern( ) 
+	on some sort of event like hover, this will show valid moves to player
+
+move_piece( )
+	moves piece into position by changing it’s location ID
+
+undo_move( )
+	sets pieces back to position prior to move
+
+is_check_mate( )
+	checks to see whether or not king or any other piece has a valid move to block move, and does not allow user to make another move until out of check
+
+
+
+	
+
+

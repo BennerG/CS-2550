@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(img/lightWood.jpg);
+  background-color: #9DFFBE;
+}
+
+#container {
+  min-height: 100%;
+  font-family: Verdana, sans-serif;
+}
+
+nav {
+  width: 100%;
+  font-size: 1.2rem;
+  background-image: url(img/darkWood.jpg);
+  background-color: brown;
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  width: 7rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: inline-block;
+  background-color: #626262;
+  border-radius: .5em;
+  color: white;
+  border: .0625rem solid black;
+}
+
+nav a:hover {
+  background-color: #6F6F6F;
+  box-shadow: .08rem .08rem .05rem black;
+}
+
+nav a:active {
+  box-shadow: none;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+}
+
+#content {
+  background-image: url(img/lightWood.jpg);
+  background-color: tan;
+  min-height: 100%;
+  padding-top: 2rem;
+  padding-bottom: 5.89rem;
+  overflow: auto;
+}
+
+#wordBlock1 {
+  width: 56.25rem;
+  margin-left: 5rem;
+  display: inline-block;
+}
+
+hr {
+  display: block;
+  padding: 0;
+  margin: .25rem 0;
+  height: 0.0625rem;
+  border: 0;
+  border-top: 0.0625rem solid black;
+}
+
+img {
+  display: inline-block;
+  width: 20em;
+  height: 20em;
+  float: right;
+  padding: 3em;
+}
+
+.white_description {
+  color: white;
+}
+
+#gameBoard {
+  width: 40.625rem;
+  height: 37.5rem;
+  border-spacing: 0;
+  margin: 0 auto;
+  border: 0.3125rem solid black;
+}
+
+#gameBoard td {
+  width: 5rem;
+  height: 5rem;
+  margin: 0;
+  padding: 0.2rem;
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+  text-align: center;
+  border: 0.0625rem solid black;
+}
+
+#gameBoard a {
+  text-decoration: none;
+}
+
+#gameBoard td.black a {
+  color: black;
+}
+
+#gameBoard td.white a {
+  color: white;
+}
+
+
+#gameBoard tr:nth-child(even) td:nth-child(odd),
+#gameBoard tr:nth-child(odd) td:nth-child(even) {
+  background-image: url(img/darkWood.jpg);
+  background: #555;
+}
+
+#gameBoard tr:nth-child(even) td:nth-child(even),
+#gameBoard tr:nth-child(odd) td:nth-child(odd) {
+  background: #ACACAC;
+}
+
+footer {
+  position: relative;
+  margin-top: -5.89rem;
+  width: 100%;
+  heigh: 5.89rem;
+  font-size: 1.2rem;
+  background-image: url(img/darkWood.jpg);
+  background-color: brown;
+  display: inline-block;
+  clear: both;
+}
+
+footer ul {
+  text-align: center;
+
+}
+
+footer li {
+  list-style: none;
+  display:inline-block;
+}
+
+footer a {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  width: 7rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: inline-block;
+  background-color: #626262;
+  border-radius: .5em;
+  color: white;
+  border: .0625rem solid black;
+}
+
+footer a:hover {
+  background-color: #6F6F6F;
+  box-shadow: .08rem .08rem .05rem black;
+}
+
+footer a:active {
+  box-shadow: none;
+}
