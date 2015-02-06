@@ -1,3 +1,6 @@
+document.body.onload = showCountdown();
+
+
 function showCountdown() {
     var countDiv = document.getElementById("countdownDiv");
     countDiv.innerHTML = genCountdown();
