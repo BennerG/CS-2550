@@ -1,9 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>GAME</title>
+    <meta charset="UTF-8">
+    <title>Chess Overview</title>
+    <link rel="icon" type="image/x-icon" href="img/knight.ico">
+    <link rel="stylesheet" href="style.css" >
   </head>
   <body>
+    <div id="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="grid.html">Play!</a></li>
+        </ul>
+      </nav>
+    <div id="content">
+      <div id="wordBlock1">
+      <h1>Chess</h1><img src="img/fullChessBoard.svg" alt="chess board"/><hr/>
+      <p>The game that I've chosen for the project is Chess</p>
 
+      <h2>Rules</h2>
+
+      <span>For More on the Rules, <a href="http://en.wikipedia.org/wiki/Rules_of_chess">Click Here</a></span>
+
+      <h2>Model</h2>
+      <p>There are 2 Players in the game represented by one of 2 colors, black or white.</p>
+      <h3>Playing Board</h3>
+      <p>8 x 8 (64 total) square game board.</p>
+      <p>Each square is either white or black (color is more for the users of the board than any real functionality throughout gameplay).</p>
+      <p>The squares of the grid can be labeled in some manner with alphanumeric tags, akin to common grid systems, e.g. “A1, A2, A3… B1, B2, B3… C1, C2, C3”.</p>
+      <p>The labeling of the grid will be important for the program and the player/user to keep track of gameplay.</p>
+
+
+      <h3>Teams (One for each player or opponent)</h3>
+      <p>
+        Black	0
+        White	1
+      </p>
+      <p>
+        These colors simply divide pieces into two equal groups. There is no correlation between the color of a game piece and the color of the square on which it is located.
+      </p>
+      <h3>Objects</h3>
+      <h4>Game_Pieces (2 equal sets for both opponents)</h4>
+      <p>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Rank</td>
+          <td>Count (per opponent)</td>
+        </tr>
+        <tr>
+          <td>Pawn</td>
+          <td>0</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Knight</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Bishop</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Rook</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Queen</td>
+          <td>4</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>King</td>
+          <td>5</td>
+          <td>1</td>
+        </tr>
+      </table>
+      <p>
+        Properties will include:
+        name (type of game piece specified)
+        rank (for score)
+        movement_pattern (a Valid_Move method will be called and use this information)
+        current_location (the location on the grid, e.g. “A8”)
+      </p>
+
+      <h4>Team (2 teams total, one player owns each team)</h4>
+      <p>
+        This is an array of all game pieces still in play
+        Once a game piece is conquered in battle, they are removed from list and added to “Team_Dead”
+      </p>
+
+      <h4>Team_Dead</h4>
+
+      <p>
+        This is an array of all game pieces out of play
+        This will be used to display pieces to end user by pulling them off the playing board and putting them in an adjacent (and invisible) grid
+      </p>
+      <h4>Player</h4>
+      <p>
+        number (index of player)
+        name (player’s name)
+        Team
+        Team_Dead
+        score (based on opponent’s Team_Dead)
+      </p>
+      <h4>Game</h4>
+      <p>
+      players (2 opponents per game one opponent can be computer)
+      total_time
+      turn_time
+      game_state (in_play, check_mate, stale_mate, uninitiated)
+      </p>
+
+      <h3>Functions/Methods</h3>
+
+      <p>
+        new_game( )
+        sets game pieces’ locations to initial locations and clears timer and score
+      </p>
+        <p>
+        check_move_pattern( )
+        on some sort of event like hover, this will show valid moves to player
+      </p>
+        <p>
+        move_piece( )
+        moves piece into position by changing it’s location ID
+      </p>
+        <p>
+        undo_move( )
+        sets pieces back to position prior to move
+      </p>
+        <p>
+        is_check_mate( )
+        checks to see whether or not king or any other piece has a valid move to block move, and does not allow user to make another move until out of check
+      </p>
+
+      </div>
+    </div>
+    </div>
+    <footer>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grid.html">Play!</a></li>
+        <li><a href="mailto:bgurrola.btg@gmail.com?subject=Chess%20Game%20Help">Contact</a></li>
+      </ul>
+    </footer>
+  <script type="text/javascript" src="actions.js">
+
+  </script>
   </body>
 </html>
